@@ -39,23 +39,23 @@
     <div class="container">
       <h2 data-aos="fade-up">I nostri appartamenti</h2>
       <div class="cards">
-        <div class="card" data-aos="fade-up" data-aos-delay="100">
+        <div class="card" data-aos="fade-up" data-aos-delay="100" onclick="openGallery(1)">
           <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Appartamento 1">
           <h3>Appartamento 1</h3>
           <p>Cucina/soggiorno, camera matrimoniale, camera con due letti singoli, bagno con doccia. Piano terra, ingresso indipendente e cortile esclusivo.</p>
-          <a href="#prenota" class="btn-small">Richiedi disponibilità</a>
+          <span class="btn-small">Vedi foto</span>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="200">
+        <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="openGallery(2)">
           <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Appartamento 2">
           <h3>Appartamento 2</h3>
           <p>Accogliente e luminoso, ideale per famiglie o coppie. Completamente attrezzato con Wi-Fi, parcheggio e tutti i comfort.</p>
-          <a href="#prenota" class="btn-small">Richiedi disponibilità</a>
+          <span class="btn-small">Vedi foto</span>
         </div>
-        <div class="card" data-aos="fade-up" data-aos-delay="300">
+        <div class="card" data-aos="fade-up" data-aos-delay="300" onclick="openGallery(3)">
           <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Appartamento 3">
           <h3>Appartamento 3</h3>
           <p>Perfetta combinazione di fascino storico e comfort moderni. Vista sul verde e posizione strategica.</p>
-          <a href="#prenota" class="btn-small">Richiedi disponibilità</a>
+          <span class="btn-small">Vedi foto</span>
         </div>
       </div>
     </div>
@@ -129,6 +129,17 @@
     <p>&copy; 2026 La Casa delle Fate – Solto Collina. Tutti i diritti riservati.</p>
   </footer>
 
+  <!-- Modal Galleria -->
+  <div id="galleryModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeGallery()">&times;</span>
+      <h3 id="galleryTitle"></h3>
+      <div class="gallery-images" id="galleryImages"></div>
+      <p id="galleryDesc" class="gallery-desc"></p>
+      <a href="#prenota" class="btn" onclick="closeGallery()">Richiedi disponibilità</a>
+    </div>
+  </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -136,6 +147,57 @@
       once: true,
       offset: 100
     });
+
+    const apartments = {
+      1: {
+        title: "Appartamento 1",
+        desc: "Cucina/soggiorno, camera matrimoniale, camera con due letti singoli, bagno con doccia. Piano terra, ingresso indipendente e cortile esclusivo.",
+        images: [
+          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      2: {
+        title: "Appartamento 2",
+        desc: "Accogliente e luminoso, ideale per famiglie o coppie. Completamente attrezzato con Wi-Fi, parcheggio e tutti i comfort.",
+        images: [
+          "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"
+        ]
+      },
+      3: {
+        title: "Appartamento 3",
+        desc: "Perfetta combinazione di fascino storico e comfort moderni. Vista sul verde e posizione strategica.",
+        images: [
+          "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80",
+          "https://images.unsplash.com/photo-1600566752229-250ed79470f8?auto=format&fit=crop&w=1200&q=80"
+        ]
+      }
+    };
+
+    function openGallery(id) {
+      const apt = apartments[id];
+      document.getElementById('galleryTitle').textContent = apt.title;
+      document.getElementById('galleryDesc').textContent = apt.desc;
+      const container = document.getElementById('galleryImages');
+      container.innerHTML = apt.images.map(src => `<img src="${src}" alt="">`).join('');
+      document.getElementById('galleryModal').style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeGallery() {
+      document.getElementById('galleryModal').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+
+    // Chiudi cliccando fuori
+    window.onclick = function(event) {
+      const modal = document.getElementById('galleryModal');
+      if (event.target === modal) closeGallery();
+    }
   </script>
 </body>
 </html>
