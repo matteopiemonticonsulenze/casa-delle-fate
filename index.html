@@ -12,11 +12,12 @@
 <body>
   <nav>
     <div class="logo">La Casa delle Fate</div>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#appartamenti">Appartamenti</a></li>
-      <li><a href="#cosa-fare">Cosa fare</a></li>
-      <li><a href="#prenota">Prenota</a></li>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul id="navMenu">
+      <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+      <li><a href="#appartamenti" onclick="toggleMenu()">Appartamenti</a></li>
+      <li><a href="#cosa-fare" onclick="toggleMenu()">Cosa fare</a></li>
+      <li><a href="#prenota" onclick="toggleMenu()">Prenota</a></li>
     </ul>
   </nav>
 
@@ -192,6 +193,20 @@
       document.getElementById('galleryModal').style.display = 'none';
       document.body.style.overflow = 'auto';
     }
+
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+
+    // Chiudi menu se si clicca su un link (già fatto sopra) o fuori
+    document.addEventListener('click', function(e) {
+      const menu = document.getElementById('navMenu');
+      const hamburger = document.querySelector('.hamburger');
+      if (!menu.contains(e.target) && !hamburger.contains(e.target) && menu.classList.contains('active')) {
+        menu.classList.remove('active');
+      }
+    });
 
     // Chiudi cliccando fuori
     window.onclick = function(event) {
