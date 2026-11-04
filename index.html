@@ -41,22 +41,22 @@
       <h2 data-aos="fade-up">I nostri appartamenti</h2>
       <div class="cards">
         <div class="card" data-aos="fade-up" data-aos-delay="100" onclick="openGallery(1)">
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Appartamento 1">
-          <h3>Appartamento 1</h3>
-          <p>Cucina/soggiorno, camera matrimoniale, camera con due letti singoli, bagno con doccia. Piano terra, ingresso indipendente e cortile esclusivo.</p>
-          <span class="btn-small">Vedi foto</span>
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Piano Terra">
+          <h3>Piano Terra</h3>
+          <p>Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.</p>
+          <span class="btn-small">Vedi foto e servizi</span>
         </div>
         <div class="card" data-aos="fade-up" data-aos-delay="200" onclick="openGallery(2)">
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Appartamento 2">
-          <h3>Appartamento 2</h3>
-          <p>Accogliente e luminoso, ideale per famiglie o coppie. Completamente attrezzato con Wi-Fi, parcheggio e tutti i comfort.</p>
-          <span class="btn-small">Vedi foto</span>
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Piano Primo">
+          <h3>Piano Primo</h3>
+          <p>Accogliente e luminoso, con balcone. Ideale per famiglie o coppie.</p>
+          <span class="btn-small">Vedi foto e servizi</span>
         </div>
         <div class="card" data-aos="fade-up" data-aos-delay="300" onclick="openGallery(3)">
-          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Appartamento 3">
-          <h3>Appartamento 3</h3>
-          <p>Perfetta combinazione di fascino storico e comfort moderni. Vista sul verde e posizione strategica.</p>
-          <span class="btn-small">Vedi foto</span>
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Secondo Piano">
+          <h3>Secondo Piano</h3>
+          <p>Con balcone e terrazza. Fascino e comfort con vista sul verde.</p>
+          <span class="btn-small">Vedi foto e servizi</span>
         </div>
       </div>
     </div>
@@ -137,6 +137,7 @@
       <h3 id="galleryTitle"></h3>
       <div class="gallery-images" id="galleryImages"></div>
       <p id="galleryDesc" class="gallery-desc"></p>
+      <div id="amenitiesSection" class="amenities"></div>
       <a href="#prenota" class="btn" onclick="closeGallery()">Richiedi disponibilità</a>
     </div>
   </div>
@@ -151,31 +152,145 @@
 
     const apartments = {
       1: {
-        title: "Appartamento 1",
-        desc: "Cucina/soggiorno, camera matrimoniale, camera con due letti singoli, bagno con doccia. Piano terra, ingresso indipendente e cortile esclusivo.",
+        title: "Piano Terra",
+        desc: "Appartamento al piano terra con ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera con due letti singoli e bagno con doccia.",
         images: [
-          "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=80",
-          "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=80"
-        ]
+          "images/piano-terra-esterno-cortile.jpg",
+          "images/piano-terra-esterno-porta.jpg",
+          "images/piano-terra-soggiorno.jpg",
+          "images/piano-terra-pranzo.jpg",
+          "images/piano-terra-cucina.jpg",
+          "images/piano-terra-camera-2letti.jpg",
+          "images/piano-terra-camera-affresco.jpg",
+          "images/piano-terra-bagno-doccia.jpg",
+          "images/piano-terra-bagno-lavabo.jpg"
+        ],
+        amenities: `
+          <h4>Ideali per il tuo soggiorno</h4>
+          <ul>
+            <li>Parcheggio gratuito</li>
+            <li>Bagno privato</li>
+            <li>Cucina</li>
+            <li>Connessione WiFi gratuita</li>
+            <li>Animali ammessi</li>
+            <li>Camere non fumatori</li>
+            <li>Disponibilità di camere familiari</li>
+          </ul>
+          <h4>Parcheggio</h4>
+          <p>Parcheggio gratuito in strada</p>
+          <h4>Internet</h4>
+          <p>Internet WiFi disponibile gratuitamente in tutta la struttura.</p>
+          <h4>Cucina</h4>
+          <ul><li>Tavolo da pranzo</li><li>Piano cottura</li><li>Utensili da cucina</li><li>Cucina</li><li>Forno a microonde</li><li>Frigorifero</li></ul>
+          <h4>Camera da letto</h4>
+          <ul><li>Biancheria da letto</li><li>Armadio o guardaroba</li></ul>
+          <h4>Bagno</h4>
+          <ul><li>Carta igienica</li><li>Asciugamani</li><li>Bidet</li><li>Vasca o doccia</li><li>Bagno privato</li><li>Prodotti da bagno in omaggio</li><li>Asciugacapelli</li><li>Doccia</li></ul>
+          <h4>Area soggiorno</h4>
+          <ul><li>Zona pranzo</li></ul>
+          <h4>Servizi in camera</h4>
+          <ul><li>Stendibiancheria</li></ul>
+          <h4>Animali</h4>
+          <p>Animali ammessi. Potrebbe essere richiesto un supplemento.</p>
+          <h4>Spazi all'aperto</h4>
+          <ul><li>Area picnic</li><li>Arredamento da esterni</li><li>Giardino</li></ul>
+          <h4>Caratteristiche dell'edificio</h4>
+          <ul><li>Indipendente</li></ul>
+          <h4>Varie</h4>
+          <ul><li>Struttura interamente non fumatori</li><li>Riscaldamento</li><li>Disponibilità di camere familiari</li><li>Camere non fumatori</li></ul>
+          <h4>Lingue parlate</h4>
+          <ul><li>Inglese</li><li>Italiano</li></ul>
+        `
       },
       2: {
-        title: "Appartamento 2",
-        desc: "Accogliente e luminoso, ideale per famiglie o coppie. Completamente attrezzato con Wi-Fi, parcheggio e tutti i comfort.",
+        title: "Piano Primo",
+        desc: "Appartamento al primo piano, accogliente e luminoso, con balcone. Ideale per famiglie o coppie.",
         images: [
           "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
           "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=1200&q=80",
           "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        amenities: `
+          <h4>Ideali per il tuo soggiorno</h4>
+          <ul>
+            <li>Bagno privato</li>
+            <li>Parcheggio</li>
+            <li>Balcone</li>
+            <li>Cucina</li>
+            <li>Connessione WiFi gratuita</li>
+            <li>Animali ammessi</li>
+            <li>Camere non fumatori</li>
+            <li>Disponibilità di camere familiari</li>
+          </ul>
+          <h4>Parcheggio</h4>
+          <p>Parcheggio gratuito in strada</p>
+          <h4>Internet</h4>
+          <p>Internet WiFi disponibile gratuitamente in tutta la struttura.</p>
+          <h4>Cucina</h4>
+          <ul><li>Tavolo da pranzo</li><li>Piano cottura</li><li>Utensili da cucina</li><li>Cucina</li><li>Forno a microonde</li><li>Frigorifero</li></ul>
+          <h4>Camera da letto</h4>
+          <ul><li>Biancheria da letto</li><li>Armadio o guardaroba</li></ul>
+          <h4>Bagno</h4>
+          <ul><li>Carta igienica</li><li>Asciugamani</li><li>Bidet</li><li>Vasca o doccia</li><li>Bagno privato</li><li>Prodotti da bagno in omaggio</li><li>Asciugacapelli</li><li>Doccia</li></ul>
+          <h4>Area soggiorno</h4>
+          <ul><li>Zona pranzo</li></ul>
+          <h4>Servizi in camera</h4>
+          <ul><li>Stendibiancheria</li></ul>
+          <h4>Animali</h4>
+          <p>Animali ammessi. Potrebbe essere richiesto un supplemento.</p>
+          <h4>Spazi all'aperto</h4>
+          <ul><li>Arredamento da esterni</li><li>Balcone</li></ul>
+          <h4>Caratteristiche dell'edificio</h4>
+          <ul><li>Indipendente</li></ul>
+          <h4>Varie</h4>
+          <ul><li>Struttura interamente non fumatori</li><li>Riscaldamento</li><li>Disponibilità di camere familiari</li><li>Camere non fumatori</li></ul>
+          <h4>Lingue parlate</h4>
+          <ul><li>Inglese</li><li>Italiano</li></ul>
+        `
       },
       3: {
-        title: "Appartamento 3",
-        desc: "Perfetta combinazione di fascino storico e comfort moderni. Vista sul verde e posizione strategica.",
+        title: "Secondo Piano",
+        desc: "Appartamento al secondo piano con balcone e terrazza. Perfetta combinazione di fascino e comfort.",
         images: [
           "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
           "https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=80",
           "https://images.unsplash.com/photo-1600566752229-250ed79470f8?auto=format&fit=crop&w=1200&q=80"
-        ]
+        ],
+        amenities: `
+          <h4>Ideali per il tuo soggiorno</h4>
+          <ul>
+            <li>Parcheggio gratuito</li>
+            <li>Bagno privato</li>
+            <li>Parcheggio</li>
+            <li>Balcone</li>
+            <li>Cucina</li>
+            <li>Connessione WiFi gratuita</li>
+            <li>Camere non fumatori</li>
+            <li>Disponibilità di camere familiari</li>
+          </ul>
+          <h4>Parcheggio</h4>
+          <p>Parcheggio gratuito in strada</p>
+          <h4>Internet</h4>
+          <p>Internet WiFi disponibile gratuitamente in tutta la struttura.</p>
+          <h4>Cucina</h4>
+          <ul><li>Tavolo da pranzo</li><li>Piano cottura</li><li>Utensili da cucina</li><li>Cucina</li><li>Forno a microonde</li><li>Frigorifero</li></ul>
+          <h4>Camera da letto</h4>
+          <ul><li>Biancheria da letto</li><li>Armadio o guardaroba</li></ul>
+          <h4>Bagno</h4>
+          <ul><li>Carta igienica</li><li>Asciugamani</li><li>Bidet</li><li>Vasca o doccia</li><li>Bagno privato</li><li>Prodotti da bagno in omaggio</li><li>Asciugacapelli</li><li>Doccia</li></ul>
+          <h4>Area soggiorno</h4>
+          <ul><li>Zona pranzo</li></ul>
+          <h4>Servizi in camera</h4>
+          <ul><li>Stendibiancheria</li></ul>
+          <h4>Spazi all'aperto</h4>
+          <ul><li>Arredamento da esterni</li><li>Balcone</li><li>Terrazza</li></ul>
+          <h4>Caratteristiche dell'edificio</h4>
+          <ul><li>Indipendente</li></ul>
+          <h4>Varie</h4>
+          <ul><li>Struttura interamente non fumatori</li><li>Riscaldamento</li><li>Disponibilità di camere familiari</li><li>Camere non fumatori</li></ul>
+          <h4>Lingue parlate</h4>
+          <ul><li>Inglese</li><li>Italiano</li></ul>
+        `
       }
     };
 
@@ -185,6 +300,7 @@
       document.getElementById('galleryDesc').textContent = apt.desc;
       const container = document.getElementById('galleryImages');
       container.innerHTML = apt.images.map(src => `<img src="${src}" alt="">`).join('');
+      document.getElementById('amenitiesSection').innerHTML = apt.amenities;
       document.getElementById('galleryModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
     }
