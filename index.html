@@ -142,6 +142,12 @@
     </div>
   </div>
 
+  <!-- Lightbox per foto ingrandita -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close-lightbox">&times;</span>
+    <img id="lightboxImg" src="" alt="">
+  </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -299,10 +305,19 @@
       document.getElementById('galleryTitle').textContent = apt.title;
       document.getElementById('galleryDesc').textContent = apt.desc;
       const container = document.getElementById('galleryImages');
-      container.innerHTML = apt.images.map(src => `<img src="${src}" alt="">`).join('');
+      container.innerHTML = apt.images.map(src => `<img src="${src}" alt="" onclick="openLightbox('${src}')">`).join('');
       document.getElementById('amenitiesSection').innerHTML = apt.amenities;
       document.getElementById('galleryModal').style.display = 'flex';
       document.body.style.overflow = 'hidden';
+    }
+
+    function openLightbox(src) {
+      document.getElementById('lightboxImg').src = src;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
     }
 
     function closeGallery() {
