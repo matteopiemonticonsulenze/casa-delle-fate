@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>La Casa delle Fate | Appartamenti a Solto Collina – Lago d'Iseo</title>
+  <title translate="no">La Casa delle Fate | Appartamenti a Solto Collina – Lago d'Iseo</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -48,7 +48,7 @@
   </div>
 
   <nav>
-    <div class="logo" data-i18n="logo">La Casa delle Fate</div>
+    <div class="logo" data-i18n="logo" translate="no">La Casa delle Fate</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
     <ul id="navMenu">
       <li><a href="#home" onclick="toggleMenu()" data-i18n="nav_home">Home</a></li>
@@ -60,7 +60,7 @@
 
   <header id="home" class="hero">
     <div class="hero-content" data-aos="fade-up">
-      <h1 data-i18n="hero_title">La Casa delle Fate</h1>
+      <h1 data-i18n="hero_title" translate="no">La Casa delle Fate</h1>
       <p data-i18n="hero_sub">Appartamenti in un edificio storico del 1700<br>a Solto Collina, sul Lago d'Iseo</p>
       <a href="#appartamenti" class="btn" data-i18n="hero_btn">Scopri gli appartamenti</a>
     </div>
@@ -69,7 +69,7 @@
   <section id="about" class="section">
     <div class="container" data-aos="fade-up">
       <h2 data-i18n="about_title">Un angolo di serenità</h2>
-      <p data-i18n="about_text">La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.</p>
+      <p data-i18n="about_text"><span translate='no'>La Casa delle Fate</span> si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.</p>
     </div>
   </section>
 
@@ -79,14 +79,14 @@
       <div class="cards">
         <div class="card" onclick="openGallery(1)">
           <img src="piano-terra-soggiorno.jpg.jpg" alt="La Casa delle Fate">
-          <h3 data-i18n="apt1_title">La Casa delle Fate</h3>
+          <h3 data-i18n="apt1_title" translate="no">La Casa delle Fate</h3>
           <p data-i18n="apt1_desc">Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.</p>
           <p class="apt-codes" data-i18n="apt1_codes">CIN: IT016200C2UAHS6HFE</p>
           <span class="btn-small" data-i18n="apt_btn">Vedi foto e servizi</span>
         </div>
         <div class="card" onclick="openGallery(2)">
           <img src="ZMEeT.jpg" alt="Il Gelsomino">
-          <h3 data-i18n="apt2_title">Il Gelsomino</h3>
+          <h3 data-i18n="apt2_title" translate="no">Il Gelsomino</h3>
           <p data-i18n="apt2_desc">Accogliente e luminoso, con balcone. Ideale per famiglie o coppie.</p>
           <p class="apt-codes" data-i18n="apt2_codes">CIN: IT016065C2F6UVWSZC</p>
           <span class="btn-small" data-i18n="apt_btn">Vedi foto e servizi</span>
@@ -134,8 +134,8 @@
             <label data-i18n="departure">Data di partenza</label>
             <input type="date" name="partenza" required>
             <select name="appartamento">
-              <option data-i18n="apt1_title">La Casa delle Fate</option>
-              <option data-i18n="apt2_title">Il Gelsomino</option>
+              <option data-i18n="apt1_title" translate="no">La Casa delle Fate</option>
+              <option data-i18n="apt2_title" translate="no">Il Gelsomino</option>
             </select>
             <textarea name="messaggio" placeholder="Messaggio" data-i18n-placeholder="message"></textarea>
             <button type="submit" class="btn" data-i18n="send">Invia richiesta</button>
@@ -155,7 +155,7 @@
   <div id="modal" class="modal">
     <div class="modal-content">
       <span class="close" onclick="closeModal()">&times;</span>
-      <h2 id="modalTitle"></h2>
+      <h2 id="modalTitle" translate="no"></h2>
       <div id="gallery" class="gallery"></div>
       <div id="modalDesc"></div>
       <div id="amenities"></div>
@@ -174,7 +174,7 @@
         hero_sub: "Appartamenti in un edificio storico del 1700<br>a Solto Collina, sul Lago d'Iseo",
         hero_btn: "Scopri gli appartamenti",
         about_title: "Un angolo di serenità",
-        about_text: "La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.",
+        about_text: "<span translate='no'>La Casa delle Fate</span> si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.",
         apt_title: "I nostri appartamenti",
         apt1_title: "La Casa delle Fate", apt1_desc: "Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.",
         apt1_codes: "CIN: IT016200C2UAHS6HFE",
@@ -197,7 +197,7 @@
         hero_sub: "Apartments in a historic 1700s building<br>in Solto Collina, on Lake Iseo",
         hero_btn: "Discover the apartments",
         about_title: "A corner of serenity",
-        about_text: "La Casa delle Fate is located in an ancient village of Solto Collina, in a finely restored 1700s building. Just a few steps from the village church with a wonderful view of the lake. Two welcoming apartments with independent entrance and courtyard.",
+        about_text: "<span translate='no'>La Casa delle Fate</span> is located in an ancient village of Solto Collina, in a finely restored 1700s building. Just a few steps from the village church with a wonderful view of the lake. Two welcoming apartments with independent entrance and courtyard.",
         apt_title: "Our apartments",
         apt1_title: "La Casa delle Fate", apt1_desc: "Independent entrance and exclusive courtyard. Kitchen/living room, double bedroom, twin room and bathroom.",
         apt1_codes: "CIN: IT016200C2UAHS6HFE",
@@ -220,7 +220,7 @@
         hero_sub: "Wohnungen in einem historischen Gebäude aus dem 18. Jahrhundert<br>in Solto Collina am Lago Iseo",
         hero_btn: "Wohnungen entdecken",
         about_title: "Ein Ort der Ruhe",
-        about_text: "La Casa delle Fate liegt in einem alten Dorf von Solto Collina, in einem fein restaurierten Gebäude aus dem Jahr 1700. Nur wenige Schritte von der Dorfkirche entfernt.",
+        about_text: "<span translate='no'>La Casa delle Fate</span> liegt in einem alten Dorf von Solto Collina, in einem fein restaurierten Gebäude aus dem Jahr 1700. Nur wenige Schritte von der Dorfkirche entfernt.",
         apt_title: "Unsere Wohnungen",
         apt1_title: "La Casa delle Fate", apt1_desc: "Eigener Eingang und exklusiver Hof. Küche/Wohnzimmer, Doppelzimmer, Zweibettzimmer und Bad.",
         apt1_codes: "CIN: IT016200C2UAHS6HFE",
@@ -243,7 +243,7 @@
         hero_sub: "Appartements dans un bâtiment historique du XVIIIe siècle<br>à Solto Collina, sur le lac d'Iseo",
         hero_btn: "Découvrir les appartements",
         about_title: "Un coin de sérénité",
-        about_text: "La Casa delle Fate se trouve dans un ancien village de Solto Collina, dans un bâtiment du XVIIIe siècle finement restauré.",
+        about_text: "<span translate='no'>La Casa delle Fate</span> se trouve dans un ancien village de Solto Collina, dans un bâtiment du XVIIIe siècle finement restauré.",
         apt_title: "Nos appartements",
         apt1_title: "La Casa delle Fate", apt1_desc: "Entrée indépendante et cour exclusive. Cuisine/salon, chambre double, chambre twin et salle de bain.",
         apt1_codes: "CIN: IT016200C2UAHS6HFE",
@@ -266,7 +266,7 @@
         hero_sub: "Appartementen in een historisch gebouw uit 1700<br>in Solto Collina, aan het Iseomeer",
         hero_btn: "Ontdek de appartementen",
         about_title: "Een hoekje van sereniteit",
-        about_text: "La Casa delle Fate ligt in een oud dorp van Solto Collina, in een fijn gerestaureerd gebouw uit 1700.",
+        about_text: "<span translate='no'>La Casa delle Fate</span> ligt in een oud dorp van Solto Collina, in een fijn gerestaureerd gebouw uit 1700.",
         apt_title: "Onze appartementen",
         apt1_title: "La Casa delle Fate", apt1_desc: "Eigen ingang en exclusieve binnenplaats. Keuken/woonkamer, tweepersoonskamer, twin kamer en badkamer.",
         apt1_codes: "CIN: IT016200C2UAHS6HFE",
