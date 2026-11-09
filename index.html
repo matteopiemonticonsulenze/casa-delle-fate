@@ -28,6 +28,7 @@
     #amenities h4 { margin: 1rem 0 0.35rem; color: #1a4a6b; font-size: 1rem; }
     #amenities ul { margin: 0 0 0.4rem 1.2rem; }
     #amenities p { margin: 0 0 0.4rem; }
+    .apt-codes { font-size: 0.82rem; color: #555; letter-spacing: 0.01em; }
     @media (max-width: 768px) {
       .lang-switcher { top: 6px; right: 6px; }
       .lang-btn { width: 28px; height: 28px; }
@@ -68,7 +69,7 @@
   <section id="about" class="section">
     <div class="container" data-aos="fade-up">
       <h2 data-i18n="about_title">Un angolo di serenità</h2>
-      <p data-i18n="about_text">La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Tre appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.</p>
+      <p data-i18n="about_text">La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.</p>
     </div>
   </section>
 
@@ -77,21 +78,17 @@
       <h2 data-aos="fade-up" data-i18n="apt_title">I nostri appartamenti</h2>
       <div class="cards">
         <div class="card" onclick="openGallery(1)">
-          <img src="piano-terra-soggiorno.jpg.jpg" alt="Piano Terra">
-          <h3 data-i18n="apt1_title">Piano Terra</h3>
+          <img src="piano-terra-soggiorno.jpg.jpg" alt="La Casa delle Fate">
+          <h3 data-i18n="apt1_title">La Casa delle Fate</h3>
           <p data-i18n="apt1_desc">Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.</p>
+          <p class="apt-codes" data-i18n="apt1_codes">CIR: 016200CNI00013<br>CIN: IT016200C2UAHS6HFE</p>
           <span class="btn-small" data-i18n="apt_btn">Vedi foto e servizi</span>
         </div>
         <div class="card" onclick="openGallery(2)">
-          <img src="ZMEeT.jpg" alt="Piano Primo">
-          <h3 data-i18n="apt2_title">Piano Primo</h3>
+          <img src="ZMEeT.jpg" alt="Il Gelsomino">
+          <h3 data-i18n="apt2_title">Il Gelsomino</h3>
           <p data-i18n="apt2_desc">Accogliente e luminoso, con balcone. Ideale per famiglie o coppie.</p>
-          <span class="btn-small" data-i18n="apt_btn">Vedi foto e servizi</span>
-        </div>
-        <div class="card" onclick="openGallery(3)">
-          <img src="ji4Vf.jpg" alt="Secondo Piano">
-          <h3 data-i18n="apt3_title">Secondo Piano</h3>
-          <p data-i18n="apt3_desc">Con balcone e terrazza. Fascino e comfort con vista sul lago d'Iseo.</p>
+          <p class="apt-codes" data-i18n="apt2_codes">Numero di licenza: 016200-CNI-00039<br>CIN: IT016200C27DLQRDNX</p>
           <span class="btn-small" data-i18n="apt_btn">Vedi foto e servizi</span>
         </div>
       </div>
@@ -137,9 +134,8 @@
             <label data-i18n="departure">Data di partenza</label>
             <input type="date" name="partenza" required>
             <select name="appartamento">
-              <option data-i18n="apt1_title">Piano Terra</option>
-              <option data-i18n="apt2_title">Piano Primo</option>
-              <option data-i18n="apt3_title">Secondo Piano</option>
+              <option data-i18n="apt1_title">La Casa delle Fate</option>
+              <option data-i18n="apt2_title">Il Gelsomino</option>
             </select>
             <textarea name="messaggio" placeholder="Messaggio" data-i18n-placeholder="message"></textarea>
             <button type="submit" class="btn" data-i18n="send">Invia richiesta</button>
@@ -178,11 +174,12 @@
         hero_sub: "Appartamenti in un edificio storico del 1700<br>a Solto Collina, sul Lago d'Iseo",
         hero_btn: "Scopri gli appartamenti",
         about_title: "Un angolo di serenità",
-        about_text: "La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Tre appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.",
+        about_text: "La Casa delle Fate si trova in un antico borgo di Solto Collina, in un edificio del 1700 finemente restaurato. A pochi passi dalla chiesa del paesello, da cui si gode una vista incantevole sul lago. Due appartamenti accoglienti, con ingresso indipendente e cortile, ideali per chi cerca tranquillità, natura e autenticità.",
         apt_title: "I nostri appartamenti",
-        apt1_title: "Piano Terra", apt1_desc: "Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.",
-        apt2_title: "Piano Primo", apt2_desc: "Accogliente e luminoso, con balcone. Ideale per famiglie o coppie.",
-        apt3_title: "Secondo Piano", apt3_desc: "Con balcone e terrazza. Fascino e comfort con vista sul lago d'Iseo.",
+        apt1_title: "La Casa delle Fate", apt1_desc: "Ingresso indipendente e cortile esclusivo. Cucina/soggiorno, camera matrimoniale, camera doppia e bagno.",
+        apt1_codes: "CIR: 016200CNI00013<br>CIN: IT016200C2UAHS6HFE",
+        apt2_title: "Il Gelsomino", apt2_desc: "Accogliente e luminoso, con balcone. Ideale per famiglie o coppie.",
+        apt2_codes: "Numero di licenza: 016200-CNI-00039<br>CIN: IT016200C27DLQRDNX",
         apt_btn: "Vedi foto e servizi",
         activities_title: "Cosa fare in zona",
         act1_title: "Sentiero dei Naturalisti", act1_text: "Facile percorso di 3,5 km con pannelli naturalistici e viste sul lago. Partenza dal parcheggio vicino al cimitero di Esmate.",
@@ -200,11 +197,12 @@
         hero_sub: "Apartments in a historic 1700s building<br>in Solto Collina, on Lake Iseo",
         hero_btn: "Discover the apartments",
         about_title: "A corner of serenity",
-        about_text: "La Casa delle Fate is located in an ancient village of Solto Collina, in a finely restored 1700s building. Just a few steps from the village church with a wonderful view of the lake. Three welcoming apartments with independent entrance and courtyard.",
+        about_text: "La Casa delle Fate is located in an ancient village of Solto Collina, in a finely restored 1700s building. Just a few steps from the village church with a wonderful view of the lake. Two welcoming apartments with independent entrance and courtyard.",
         apt_title: "Our apartments",
-        apt1_title: "Ground Floor", apt1_desc: "Independent entrance and exclusive courtyard. Kitchen/living room, double bedroom, twin room and bathroom.",
-        apt2_title: "First Floor", apt2_desc: "Welcoming and bright, with balcony. Ideal for families or couples.",
-        apt3_title: "Second Floor", apt3_desc: "With balcony and terrace. Charm and comfort with a view of Lake Iseo.",
+        apt1_title: "La Casa delle Fate", apt1_desc: "Independent entrance and exclusive courtyard. Kitchen/living room, double bedroom, twin room and bathroom.",
+        apt1_codes: "CIR: 016200CNI00013<br>CIN: IT016200C2UAHS6HFE",
+        apt2_title: "Il Gelsomino", apt2_desc: "Welcoming and bright, with balcony. Ideal for families or couples.",
+        apt2_codes: "Licence no.: 016200-CNI-00039<br>CIN: IT016200C27DLQRDNX",
         apt_btn: "See photos and amenities",
         activities_title: "Things to do nearby",
         act1_title: "Naturalists' Trail", act1_text: "Easy 3.5 km path with nature panels and lake views. Starting from the parking near Esmate cemetery.",
@@ -224,9 +222,10 @@
         about_title: "Ein Ort der Ruhe",
         about_text: "La Casa delle Fate liegt in einem alten Dorf von Solto Collina, in einem fein restaurierten Gebäude aus dem Jahr 1700. Nur wenige Schritte von der Dorfkirche entfernt.",
         apt_title: "Unsere Wohnungen",
-        apt1_title: "Erdgeschoss", apt1_desc: "Eigener Eingang und exklusiver Hof. Küche/Wohnzimmer, Doppelzimmer, Zweibettzimmer und Bad.",
-        apt2_title: "Erste Etage", apt2_desc: "Gemütlich und hell, mit Balkon. Ideal für Familien oder Paare.",
-        apt3_title: "Zweite Etage", apt3_desc: "Mit Balkon und Terrasse. Charme und Komfort mit Blick auf den Lago d'Iseo.",
+        apt1_title: "La Casa delle Fate", apt1_desc: "Eigener Eingang und exklusiver Hof. Küche/Wohnzimmer, Doppelzimmer, Zweibettzimmer und Bad.",
+        apt1_codes: "CIR: 016200CNI00013<br>CIN: IT016200C2UAHS6HFE",
+        apt2_title: "Il Gelsomino", apt2_desc: "Gemütlich und hell, mit Balkon. Ideal für Familien oder Paare.",
+        apt2_codes: "Lizenznummer: 016200-CNI-00039<br>CIN: IT016200C27DLQRDNX",
         apt_btn: "Fotos und Ausstattung",
         activities_title: "Aktivitäten in der Umgebung",
         act1_title: "Sentiero dei Naturalisti", act1_text: "Leichter 3,5 km langer Weg mit Naturtafeln und Seeblicken.",
@@ -246,9 +245,10 @@
         about_title: "Un coin de sérénité",
         about_text: "La Casa delle Fate se trouve dans un ancien village de Solto Collina, dans un bâtiment du XVIIIe siècle finement restauré.",
         apt_title: "Nos appartements",
-        apt1_title: "Rez-de-chaussée", apt1_desc: "Entrée indépendante et cour exclusive. Cuisine/salon, chambre double, chambre twin et salle de bain.",
-        apt2_title: "Premier étage", apt2_desc: "Accueillant et lumineux, avec balcon. Idéal pour les familles ou les couples.",
-        apt3_title: "Deuxième étage", apt3_desc: "Avec balcon et terrasse. Charme et confort avec vue sur le lac d'Iseo.",
+        apt1_title: "La Casa delle Fate", apt1_desc: "Entrée indépendante et cour exclusive. Cuisine/salon, chambre double, chambre twin et salle de bain.",
+        apt1_codes: "CIR : 016200CNI00013<br>CIN : IT016200C2UAHS6HFE",
+        apt2_title: "Il Gelsomino", apt2_desc: "Accueillant et lumineux, avec balcon. Idéal pour les familles ou les couples.",
+        apt2_codes: "Numéro de licence : 016200-CNI-00039<br>CIN : IT016200C27DLQRDNX",
         apt_btn: "Voir photos et services",
         activities_title: "Que faire aux alentours",
         act1_title: "Sentier des Naturalistes", act1_text: "Parcours facile de 3,5 km avec panneaux naturalistes et vues sur le lac.",
@@ -268,9 +268,10 @@
         about_title: "Een hoekje van sereniteit",
         about_text: "La Casa delle Fate ligt in een oud dorp van Solto Collina, in een fijn gerestaureerd gebouw uit 1700.",
         apt_title: "Onze appartementen",
-        apt1_title: "Begane grond", apt1_desc: "Eigen ingang en exclusieve binnenplaats. Keuken/woonkamer, tweepersoonskamer, twin kamer en badkamer.",
-        apt2_title: "Eerste verdieping", apt2_desc: "Gezellig en licht, met balkon. Ideaal voor gezinnen of stellen.",
-        apt3_title: "Tweede verdieping", apt3_desc: "Met balkon en terras. Charme en comfort met uitzicht op het Iseomeer.",
+        apt1_title: "La Casa delle Fate", apt1_desc: "Eigen ingang en exclusieve binnenplaats. Keuken/woonkamer, tweepersoonskamer, twin kamer en badkamer.",
+        apt1_codes: "CIR: 016200CNI00013<br>CIN: IT016200C2UAHS6HFE",
+        apt2_title: "Il Gelsomino", apt2_desc: "Gezellig en licht, met balkon. Ideaal voor gezinnen of stellen.",
+        apt2_codes: "Licentienummer: 016200-CNI-00039<br>CIN: IT016200C27DLQRDNX",
         apt_btn: "Foto's en voorzieningen",
         activities_title: "Wat te doen in de buurt",
         act1_title: "Naturalistenpad", act1_text: "Makkelijke 3,5 km route met natuurpanelen en uitzichten op het meer.",
@@ -306,9 +307,8 @@
     }
 
     const apartments = {
-      1: { title: "Piano Terra", desc: "Appartamento al piano terra con ingresso indipendente e cortile esclusivo.", images: ["piano-terra-esterno-cortile.jpg.jpg","piano-terra-esterno-porta.jpg.jpg","piano-terra-soggiorno.jpg.jpg","piano-terra-pranzo.jpg.jpg","piano-terra-cucina.jpg.jpg","piano-terra-camera-2letti.jpg.jpg","piano-terra-camera-affresco.jpg.jpg","piano-terra-bagno-doccia.jpg.jpg","piano-terra-bagno-lavabo.jpg.jpg"] },
-      2: { title: "Piano Primo", desc: "Appartamento al primo piano, accogliente e luminoso, con balcone.", images: ["qhAVa.jpg","CfSjL.jpg","mrUli.jpg","QUs79.jpg","ZMEeT.jpg","PZ7Zq.jpg","dwTJ7.jpg","zikuJ.jpg","k3S3N.jpg","fbjgl.jpg","6FX46.jpg","SPUnL.jpg"] },
-      3: { title: "Secondo Piano", desc: "Appartamento al secondo piano con balcone e terrazza. Vista sul lago d'Iseo.", images: ["ji4Vf.jpg","tG31w.jpg","kFx2K.jpg","mE36N.jpg","v7rTD.jpg","4NMSX.jpg","2j2n3.jpg","tllLe.jpg","4EJRr.jpg","8jniM.jpg"] }
+      1: { title: "La Casa delle Fate", desc: "Appartamento al piano terra con ingresso indipendente e cortile esclusivo.", images: ["piano-terra-esterno-cortile.jpg.jpg","piano-terra-esterno-porta.jpg.jpg","piano-terra-soggiorno.jpg.jpg","piano-terra-pranzo.jpg.jpg","piano-terra-cucina.jpg.jpg","piano-terra-camera-2letti.jpg.jpg","piano-terra-camera-affresco.jpg.jpg","piano-terra-bagno-doccia.jpg.jpg","piano-terra-bagno-lavabo.jpg.jpg"] },
+      2: { title: "Il Gelsomino", desc: "Appartamento al primo piano, accogliente e luminoso, con balcone.", images: ["qhAVa.jpg","CfSjL.jpg","mrUli.jpg","QUs79.jpg","ZMEeT.jpg","PZ7Zq.jpg","dwTJ7.jpg","zikuJ.jpg","k3S3N.jpg","fbjgl.jpg","6FX46.jpg","SPUnL.jpg"] }
     };
 
     function getAmenities(id, lang) {
@@ -326,13 +326,6 @@
           de: `<h4>Ideal für Ihren Aufenthalt</h4><ul><li>Eigenes Bad</li><li>Parken</li><li>Balkon</li><li>Küche</li><li>Kostenloses WLAN</li><li>Haustiere erlaubt</li><li>Nichtraucherzimmer</li><li>Familienzimmer verfügbar</li></ul><h4>Parken</h4><p>Kostenloses Parken an der Straße</p><h4>Internet</h4><p>Kostenloses WLAN in der gesamten Unterkunft.</p><h4>Küche</h4><ul><li>Esstisch</li><li>Herd</li><li>Küchenutensilien</li><li>Küche</li><li>Mikrowelle</li><li>Kühlschrank</li></ul><h4>Schlafzimmer</h4><ul><li>Bettwäsche</li><li>Kleiderschrank</li></ul><h4>Badezimmer</h4><ul><li>Toilettenpapier</li><li>Handtücher</li><li>Bidet</li><li>Badewanne oder Dusche</li><li>Eigenes Bad</li><li>Kostenlose Toilettenartikel</li><li>Haartrockner</li><li>Dusche</li></ul><h4>Wohnbereich</h4><ul><li>Essbereich</li></ul><h4>Zimmerausstattung</h4><ul><li>Wäscheständer</li></ul><h4>Haustiere</h4><p>Haustiere erlaubt. Es können Zuschläge anfallen.</p><h4>Außenbereich</h4><ul><li>Gartenmöbel</li><li>Balkon</li></ul><h4>Gebäudeeigenschaften</h4><ul><li>Freistehend</li></ul><h4>Sonstiges</h4><ul><li>Komplett rauchfreie Unterkunft</li><li>Heizung</li><li>Familienzimmer</li><li>Nichtraucherzimmer</li></ul><h4>Gesprochene Sprachen</h4><ul><li>Englisch</li><li>Italienisch</li></ul>`,
           fr: `<h4>Idéal pour votre séjour</h4><ul><li>Salle de bain privée</li><li>Parking</li><li>Balcon</li><li>Cuisine</li><li>WiFi gratuit</li><li>Animaux acceptés</li><li>Chambres non-fumeurs</li><li>Chambres familiales disponibles</li></ul><h4>Parking</h4><p>Parking gratuit dans la rue</p><h4>Internet</h4><p>WiFi gratuit disponible dans toute la propriété.</p><h4>Cuisine</h4><ul><li>Table à manger</li><li>Plaques de cuisson</li><li>Ustensiles de cuisine</li><li>Cuisine</li><li>Micro-ondes</li><li>Réfrigérateur</li></ul><h4>Chambre</h4><ul><li>Linge de lit</li><li>Armoire ou penderie</li></ul><h4>Salle de bain</h4><ul><li>Papier toilette</li><li>Serviettes</li><li>Bidet</li><li>Baignoire ou douche</li><li>Salle de bain privée</li><li>Articles de toilette gratuits</li><li>Sèche-cheveux</li><li>Douche</li></ul><h4>Espace de vie</h4><ul><li>Espace repas</li></ul><h4>Équipements de la chambre</h4><ul><li>Étendoir à linge</li></ul><h4>Animaux</h4><p>Animaux acceptés. Un supplément peut être demandé.</p><h4>Extérieur</h4><ul><li>Mobilier d'extérieur</li><li>Balcon</li></ul><h4>Caractéristiques du bâtiment</h4><ul><li>Indépendant</li></ul><h4>Divers</h4><ul><li>Établissement entièrement non-fumeurs</li><li>Chauffage</li><li>Chambres familiales</li><li>Chambres non-fumeurs</li></ul><h4>Langues parlées</h4><ul><li>Anglais</li><li>Italien</li></ul>`,
           nl: `<h4>Ideaal voor uw verblijf</h4><ul><li>Eigen badkamer</li><li>Parkeren</li><li>Balkon</li><li>Keuken</li><li>Gratis WiFi</li><li>Huisdieren toegestaan</li><li>Niet-rokers kamers</li><li>Gezinskamers beschikbaar</li></ul><h4>Parkeren</h4><p>Gratis straatparkeren</p><h4>Internet</h4><p>Gratis WiFi beschikbaar in de hele accommodatie.</p><h4>Keuken</h4><ul><li>Eettafel</li><li>Kookplaat</li><li>Keukengerei</li><li>Keuken</li><li>Magnetron</li><li>Koelkast</li></ul><h4>Slaapkamer</h4><ul><li>Beddengoed</li><li>Kledingkast of garderobe</li></ul><h4>Badkamer</h4><ul><li>Toiletpapier</li><li>Handdoeken</li><li>Bidet</li><li>Bad of douche</li><li>Eigen badkamer</li><li>Gratis toiletartikelen</li><li>Haardroger</li><li>Douche</li></ul><h4>Woonruimte</h4><ul><li>Eethoek</li></ul><h4>Kamerfaciliteiten</h4><ul><li>Wasrek</li></ul><h4>Huisdieren</h4><p>Huisdieren toegestaan. Er kunnen toeslagen van toepassing zijn.</p><h4>Buiten</h4><ul><li>Buitenmeubilair</li><li>Balkon</li></ul><h4>Gebouweigenschappen</h4><ul><li>Vrijstaand</li></ul><h4>Overig</h4><ul><li>Volledig rookvrij pand</li><li>Verwarming</li><li>Gezinskamers</li><li>Niet-rokers kamers</li></ul><h4>Gesproken talen</h4><ul><li>Engels</li><li>Italiaans</li></ul>`
-        },
-        3: {
-          it: `<h4>Ideali per il tuo soggiorno</h4><ul><li>Parcheggio gratuito</li><li>Bagno privato</li><li>Parcheggio</li><li>Balcone</li><li>Cucina</li><li>Connessione WiFi gratuita</li><li>Camere non fumatori</li><li>Disponibilità di camere familiari</li></ul><h4>Parcheggio</h4><p>Parcheggio gratuito in strada</p><h4>Internet</h4><p>Internet WiFi disponibile gratuitamente in tutta la struttura.</p><h4>Cucina</h4><ul><li>Tavolo da pranzo</li><li>Piano cottura</li><li>Utensili da cucina</li><li>Cucina</li><li>Forno a microonde</li><li>Frigorifero</li></ul><h4>Camera da letto</h4><ul><li>Biancheria da letto</li><li>Armadio o guardaroba</li></ul><h4>Bagno</h4><ul><li>Carta igienica</li><li>Asciugamani</li><li>Bidet</li><li>Vasca o doccia</li><li>Bagno privato</li><li>Prodotti da bagno in omaggio</li><li>Asciugacapelli</li><li>Doccia</li></ul><h4>Area soggiorno</h4><ul><li>Zona pranzo</li></ul><h4>Servizi in camera</h4><ul><li>Stendibiancheria</li></ul><h4>Spazi all'aperto</h4><ul><li>Arredamento da esterni</li><li>Balcone</li><li>Terrazza</li></ul><h4>Caratteristiche dell'edificio</h4><ul><li>Indipendente</li></ul><h4>Varie</h4><ul><li>Struttura interamente non fumatori</li><li>Riscaldamento</li><li>Disponibilità di camere familiari</li><li>Camere non fumatori</li></ul><h4>Lingue parlate</h4><ul><li>Inglese</li><li>Italiano</li></ul>`,
-          en: `<h4>Ideal for your stay</h4><ul><li>Free parking</li><li>Private bathroom</li><li>Parking</li><li>Balcony</li><li>Kitchen</li><li>Free WiFi</li><li>Non-smoking rooms</li><li>Family rooms available</li></ul><h4>Parking</h4><p>Free street parking</p><h4>Internet</h4><p>Free WiFi available throughout the property.</p><h4>Kitchen</h4><ul><li>Dining table</li><li>Stovetop</li><li>Kitchenware</li><li>Kitchen</li><li>Microwave</li><li>Refrigerator</li></ul><h4>Bedroom</h4><ul><li>Bed linen</li><li>Wardrobe or closet</li></ul><h4>Bathroom</h4><ul><li>Toilet paper</li><li>Towels</li><li>Bidet</li><li>Bathtub or shower</li><li>Private bathroom</li><li>Free toiletries</li><li>Hairdryer</li><li>Shower</li></ul><h4>Living area</h4><ul><li>Dining area</li></ul><h4>Room amenities</h4><ul><li>Clothes rack</li></ul><h4>Outdoor</h4><ul><li>Outdoor furniture</li><li>Balcony</li><li>Terrace</li></ul><h4>Building characteristics</h4><ul><li>Detached</li></ul><h4>Miscellaneous</h4><ul><li>Entirely non-smoking property</li><li>Heating</li><li>Family rooms</li><li>Non-smoking rooms</li></ul><h4>Languages spoken</h4><ul><li>English</li><li>Italian</li></ul>`,
-          de: `<h4>Ideal für Ihren Aufenthalt</h4><ul><li>Kostenloses Parken</li><li>Eigenes Bad</li><li>Parken</li><li>Balkon</li><li>Küche</li><li>Kostenloses WLAN</li><li>Nichtraucherzimmer</li><li>Familienzimmer verfügbar</li></ul><h4>Parken</h4><p>Kostenloses Parken an der Straße</p><h4>Internet</h4><p>Kostenloses WLAN in der gesamten Unterkunft.</p><h4>Küche</h4><ul><li>Esstisch</li><li>Herd</li><li>Küchenutensilien</li><li>Küche</li><li>Mikrowelle</li><li>Kühlschrank</li></ul><h4>Schlafzimmer</h4><ul><li>Bettwäsche</li><li>Kleiderschrank</li></ul><h4>Badezimmer</h4><ul><li>Toilettenpapier</li><li>Handtücher</li><li>Bidet</li><li>Badewanne oder Dusche</li><li>Eigenes Bad</li><li>Kostenlose Toilettenartikel</li><li>Haartrockner</li><li>Dusche</li></ul><h4>Wohnbereich</h4><ul><li>Essbereich</li></ul><h4>Zimmerausstattung</h4><ul><li>Wäscheständer</li></ul><h4>Außenbereich</h4><ul><li>Gartenmöbel</li><li>Balkon</li><li>Terrasse</li></ul><h4>Gebäudeeigenschaften</h4><ul><li>Freistehend</li></ul><h4>Sonstiges</h4><ul><li>Komplett rauchfreie Unterkunft</li><li>Heizung</li><li>Familienzimmer</li><li>Nichtraucherzimmer</li></ul><h4>Gesprochene Sprachen</h4><ul><li>Englisch</li><li>Italienisch</li></ul>`,
-          fr: `<h4>Idéal pour votre séjour</h4><ul><li>Parking gratuit</li><li>Salle de bain privée</li><li>Parking</li><li>Balcon</li><li>Cuisine</li><li>WiFi gratuit</li><li>Chambres non-fumeurs</li><li>Chambres familiales disponibles</li></ul><h4>Parking</h4><p>Parking gratuit dans la rue</p><h4>Internet</h4><p>WiFi gratuit disponible dans toute la propriété.</p><h4>Cuisine</h4><ul><li>Table à manger</li><li>Plaques de cuisson</li><li>Ustensiles de cuisine</li><li>Cuisine</li><li>Micro-ondes</li><li>Réfrigérateur</li></ul><h4>Chambre</h4><ul><li>Linge de lit</li><li>Armoire ou penderie</li></ul><h4>Salle de bain</h4><ul><li>Papier toilette</li><li>Serviettes</li><li>Bidet</li><li>Baignoire ou douche</li><li>Salle de bain privée</li><li>Articles de toilette gratuits</li><li>Sèche-cheveux</li><li>Douche</li></ul><h4>Espace de vie</h4><ul><li>Espace repas</li></ul><h4>Équipements de la chambre</h4><ul><li>Étendoir à linge</li></ul><h4>Extérieur</h4><ul><li>Mobilier d'extérieur</li><li>Balcon</li><li>Terrasse</li></ul><h4>Caractéristiques du bâtiment</h4><ul><li>Indépendant</li></ul><h4>Divers</h4><ul><li>Établissement entièrement non-fumeurs</li><li>Chauffage</li><li>Chambres familiales</li><li>Chambres non-fumeurs</li></ul><h4>Langues parlées</h4><ul><li>Anglais</li><li>Italien</li></ul>`,
-          nl: `<h4>Ideaal voor uw verblijf</h4><ul><li>Gratis parkeren</li><li>Eigen badkamer</li><li>Parkeren</li><li>Balkon</li><li>Keuken</li><li>Gratis WiFi</li><li>Niet-rokers kamers</li><li>Gezinskamers beschikbaar</li></ul><h4>Parkeren</h4><p>Gratis straatparkeren</p><h4>Internet</h4><p>Gratis WiFi beschikbaar in de hele accommodatie.</p><h4>Keuken</h4><ul><li>Eettafel</li><li>Kookplaat</li><li>Keukengerei</li><li>Keuken</li><li>Magnetron</li><li>Koelkast</li></ul><h4>Slaapkamer</h4><ul><li>Beddengoed</li><li>Kledingkast of garderobe</li></ul><h4>Badkamer</h4><ul><li>Toiletpapier</li><li>Handdoeken</li><li>Bidet</li><li>Bad of douche</li><li>Eigen badkamer</li><li>Gratis toiletartikelen</li><li>Haardroger</li><li>Douche</li></ul><h4>Woonruimte</h4><ul><li>Eethoek</li></ul><h4>Kamerfaciliteiten</h4><ul><li>Wasrek</li></ul><h4>Buiten</h4><ul><li>Buitenmeubilair</li><li>Balkon</li><li>Terras</li></ul><h4>Gebouweigenschappen</h4><ul><li>Vrijstaand</li></ul><h4>Overig</h4><ul><li>Volledig rookvrij pand</li><li>Verwarming</li><li>Gezinskamers</li><li>Niet-rokers kamers</li></ul><h4>Gesproken talen</h4><ul><li>Engels</li><li>Italiaans</li></ul>`
         }
       };
       return (amenities[id] && amenities[id][lang]) || amenities[id].it;
@@ -341,9 +334,11 @@
     function openGallery(id) {
       const apt = apartments[id];
       const lang = localStorage.getItem('lang') || 'it';
-      const titleKey = { 1: 'apt1_title', 2: 'apt2_title', 3: 'apt3_title' }[id];
+      const titleKey = { 1: 'apt1_title', 2: 'apt2_title' }[id];
+      const descKey = { 1: 'apt1_desc', 2: 'apt2_desc' }[id];
+      const codesKey = { 1: 'apt1_codes', 2: 'apt2_codes' }[id];
       document.getElementById('modalTitle').innerText = (translations[lang] && translations[lang][titleKey]) || apt.title;
-      document.getElementById('modalDesc').innerHTML = '<p>' + apt.desc + '</p>';
+      document.getElementById('modalDesc').innerHTML = '<p>' + ((translations[lang] && translations[lang][descKey]) || apt.desc) + '</p><p class="apt-codes">' + ((translations[lang] && translations[lang][codesKey]) || '') + '</p>';
       document.getElementById('gallery').innerHTML = apt.images.map(src => '<img src="' + src + '" onclick="this.requestFullscreen?.() || window.open(this.src)">').join('');
       document.getElementById('amenities').innerHTML = getAmenities(id, lang);
       document.getElementById('modal').style.display = 'flex';
